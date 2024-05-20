@@ -1,0 +1,36 @@
+{
+    "configurations": [
+    {
+        "name": "(gdb) Launch",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${workspaceFolder}/build/gcare_inter",
+        "args": [
+            "-q", "",
+            "-m", "alley",
+            "-i", "${workspaceFolder}/data/queryset/human",
+            "-d", "${workspaceFolder}/data/dataset/human/human",
+            "-p", "0.01",
+            "-n", "30",
+            "-o", "${workspaceFolder}/data/result/step2/result.txt",
+        ],
+        "stopAtConnect": false,
+        "cwd": "${fileDirname}",
+        "environment": [],
+        "externalConsole": false,
+        "MIMode": "gdb",
+        "setupCommands": [
+            {
+                "description": "Enable pretty-printing for gdb",
+                "text": "-enable-pretty-printing",
+                "ignoreFailures": true
+            },
+            {
+                "description": "Set disassembly-flavor intel",
+                "text": "set disassembly-flavor intel",
+                "ignoreFailures": true
+            }
+        ],
+    }
+    ]
+}

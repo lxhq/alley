@@ -21,8 +21,8 @@ target_link_libraries(gcare_graph boost_program_options stdc++fs)
 
 add_executable(gcare_inter ./src/main.cc ./src/util.cc ./src/data_graph.cc ./src/query_graph.cc ./src/pattern.cc ./src/intersection.cc ./src/pattern_mining.cc ./src/alley.cc)
 set_target_properties(gcare_inter PROPERTIES LINKER_LANGUAGE CXX)
-target_compile_options(gcare_inter PRIVATE -g -O2 -std=c++11 -Bstatic)
-target_compile_definitions(gcare_inter PRIVATE -DINTERSECTION -DSELF_LOOP_PATTERN)
+target_compile_options(gcare_inter PRIVATE -g -std=c++11 -Bstatic)
+target_compile_definitions(gcare_inter PRIVATE -DINTERSECTION -DSELF_LOOP_PATTERN -DGGDB)
 target_link_libraries(gcare_inter boost_program_options stdc++fs)
 
 add_executable(gcare_relation ./src/main.cc ./src/util.cc ./src/ndvector.cc ./src/data_relations.cc ./src/correlated_sampling.cc ./src/bound_sketch.cc)
