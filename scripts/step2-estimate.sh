@@ -3,8 +3,8 @@ result_dir=../data/result/step2
 
 mkdir -p ${result_dir}
 
-datasets=( human )
-methods=( alley)
+datasets=( lubm80 aids human yago hprd youtube )
+methods=( alley alleyTPI wj ibjs )
 ps=( 0.001 )
 
 for data in ${datasets[@]}; do
